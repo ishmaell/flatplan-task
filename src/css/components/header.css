@@ -1,10 +1,7 @@
 .main-header {
-  @apply fixed top-0 left-0 pt-8 w-full z-10;
+  @apply fixed top-0 left-0 lg:p-5 pt-8 w-full z-10;
 }
 
-.main-header .container {
-  
-}
 
 .main-header .logo {
   @apply w-[320px];

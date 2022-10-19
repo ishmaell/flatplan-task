@@ -3,16 +3,20 @@
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
+.banner .container.with-flex {
+  @apply lg:flex block;
+}
+
 .banner-image {
-  @apply w-[320px];
+  @apply lg:w-[320px] w-[200px] lg:m-0 mt-0 mb-3 mx-auto;
 }
 
 .banner-text {
-  @apply ml-[170px] pt-32 text-white;
+  @apply lg:ml-[170px] lg:pt-32 px-10 text-white;
 }
 
 .banner-text h1 {
-  @apply text-5xl mb-7 font-bold;
+  @apply lg:text-5xl text-3xl mb-7 font-bold;
 }
 
 .banner-text p {

@@ -1,19 +1,23 @@
 .waitlist {
-  @apply bg-primary-100 py-14 min-h-[380px] relative;  
+  @apply bg-primary-100 py-14 lg:min-h-[380px] min-h-[280px] relative;  
 }
 
 .waitlist img {
   @apply absolute -bottom-6;
 }
 
+.waitlist img:nth-child(1) {
+  @apply m-auto;
+}
+
 .waitlist img:nth-child(2) {
-  @apply right-0;
+  @apply right-0 lg:block hidden !important;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
 .waitlist h2 {
-  @apply text-white text-5xl font-bold text-center;
+  @apply text-white lg:text-5xl text-3xl font-bold text-center;
 }
 
 .email-area {

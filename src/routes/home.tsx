@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from '../constants';
 import Phone from '../assets/images/phone.png';
 import Favorite from '../assets/images/favorite.svg';
 import Bell from '../assets/images/bell.svg';
@@ -29,12 +30,7 @@ const Home = () => {
     setIsSending(true);
 
     emailjs
-      .send(
-        'service_5z0camt',
-        'template_1aoyy0z',
-        templateParams,
-        'caX3Z3pBvOag8ehsa'
-      )
+      .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then(
         (response) => {
           alert('Thank you for joining our waitlist!');
@@ -119,8 +115,8 @@ const Home = () => {
         <div className="container">
           <h2>Join the waitlist</h2>
         </div>
-        <img src={Lead} alt="USB cable" />
-        <img src={Lead} alt="USB cable" />
+        <img src={Lead} alt="USB cable 2" />
+        <img src={Lead} alt="USB cable 1" />
       </div>
       <div className="email-area">
         <form onSubmit={handleSubmit}>
