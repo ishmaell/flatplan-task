@@ -1,17 +1,41 @@
 .waitlist {
-  @apply bg-primary-100 py-14 min-h-[400px] relative;  
+  @apply bg-primary-100 py-14 lg:min-h-[380px] min-h-[280px] relative;  
 }
 
 .waitlist img {
   @apply absolute -bottom-6;
 }
 
+.waitlist img:nth-child(1) {
+  @apply m-auto;
+}
+
 .waitlist img:nth-child(2) {
-  @apply right-0;
+  @apply right-0 lg:block hidden !important;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
 .waitlist h2 {
-  @apply text-white text-5xl font-bold text-center;
+  @apply text-white lg:text-5xl text-3xl font-bold text-center;
+}
+
+.email-area {
+  @apply pt-40;
+}
+
+.email-area .container {
+  @apply flex flex-col items-center justify-center;
+}
+
+.email-area label {
+  @apply block font-ptSans font-bold mb-7 text-primary-300 text-lg;
+}
+
+.email-area input[type="email"] {
+  @apply border-[1px] font-ptSans mb-5 p-3 max-w-sm w-full rounded;
+}
+
+.email-area button {
+  @apply border-[1.5px] border-primary-100 p-3 min-w-[240px] rounded uppercase font-ptSans text-lg text-primary-100 transition-all hover:bg-primary-100 hover:text-white disabled:cursor-not-allowed disabled:bg-gray-100 disabled:border-gray-100 disabled:text-gray-300 disabled:font-bold;
 }

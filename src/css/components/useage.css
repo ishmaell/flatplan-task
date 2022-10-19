@@ -1,13 +1,13 @@
 .useage {
-  @apply py-20;
+  @apply lg:py-20 py-10 px-5;
 }
 
 .useage h2 {
-  @apply text-5xl font-bold text-primary-200 text-center mb-20;
+  @apply lg:text-5xl text-3xl font-bold text-primary-200 text-center mb-20;
 }
 
 .useage-items {
-  @apply grid grid-cols-3 gap-10;
+  @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10;
 }
 
 .useage-item {

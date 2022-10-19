@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from '../constants';
 import Phone from '../assets/images/phone.png';
 import Favorite from '../assets/images/favorite.svg';
 import Bell from '../assets/images/bell.svg';
@@ -9,6 +11,41 @@ import Pin from '../assets/images/pin.svg';
 import Lead from '../assets/images/lead1.png';
 
 const Home = () => {
+  const emailInput = useRef<HTMLInputElement>(null);
+  const [email, setEmail] = useState<string>('');
+  const [isSending, setIsSending] = useState<boolean>(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const templateParams = {
+    from_name: email,
+    to_name: 'FlatPlan',
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setIsSending(true);
+
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+      .then(
+        (response) => {
+          alert('Thank you for joining our waitlist!');
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        (err) => {
+          console.log('FAILED...', err);
+        }
+      )
+      .finally(() => {
+        if (emailInput.current) emailInput.current.value = '';
+        setEmail('');
+        setIsSending(false);
+      });
+  };
   return (
     <section>
       <div className="banner">
@@ -78,8 +115,25 @@ const Home = () => {
         <div className="container">
           <h2>Join the waitlist</h2>
         </div>
-        <img src={Lead} alt="USB cable" />
-        <img src={Lead} alt="USB cable" />
+        <img src={Lead} alt="USB cable 2" />
+        <img src={Lead} alt="USB cable 1" />
+      </div>
+      <div className="email-area">
+        <form onSubmit={handleSubmit}>
+          <div className="container">
+            <label htmlFor="addYourEmail">Add your email</label>
+            <input
+              ref={emailInput}
+              required
+              type="email"
+              placeholder="Write e-mail address..."
+              onChange={handleChange}
+            />
+            <button type="submit" disabled={isSending}>
+              {isSending ? 'Sending...' : 'Subscribe'}
+            </button>
+          </div>
+        </form>
       </div>
     </section>
   );
