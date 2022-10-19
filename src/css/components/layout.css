@@ -1,0 +1,7 @@
+.container {
+  @apply m-auto max-w-5xl w-full !important;
+}
+
+.container.with-flex {
+  @apply flex;
+}

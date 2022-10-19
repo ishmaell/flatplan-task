@@ -4,6 +4,10 @@
 
 @import url("https://use.typekit.net/dgh7yme.css");
 
+@import './components/banner.css';
+@import './components/header.css';
+@import './components/layout.css';
+
 
 * {
   margin: 0;

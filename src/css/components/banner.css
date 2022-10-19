@@ -1,0 +1,20 @@
+.banner {
+  @apply bg-primary-100 pt-40 min-h-[600px];
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.banner-image {
+  @apply w-[320px];
+}
+
+.banner-text {
+  @apply ml-[170px] pt-32 text-white;
+}
+
+.banner-text h1 {
+  @apply text-5xl mb-7 font-bold;
+}
+
+.banner-text p {
+  @apply font-ptSans text-lg;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="57px" viewBox="0 0 39 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 12</title>
+    <g id="LP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LP---Web" transform="translate(-581.000000, -945.000000)" stroke="#3B645F" stroke-width="4">
+            <g id="Group-6" transform="translate(0.000000, 650.000000)">
+                <g id="Group-12" transform="translate(581.000000, 295.000000)">
+                    <rect id="Rectangle-3" x="2" y="26.375" width="35" height="27.6875" rx="3"></rect>
+                    <path d="M21.9435136,2 C25.2038722,2 28.1555461,3.32182763 30.2920643,5.45927633 C32.4286554,7.59679809 33.75,10.5499384 33.75,13.8125 L33.75,13.8125 L33.75,25.625 L5.25,25.625 L5.25,13.8125 C5.25,10.551376 6.57281528,7.59900373 8.70939625,5.46149215 C10.8468364,3.32312102 13.7988828,2 17.0564864,2 L17.0564864,2 Z" id="Rectangle-3-Copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
