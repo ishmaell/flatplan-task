@@ -6,6 +6,7 @@ import Star from '../assets/images/Star.svg';
 import Camera from '../assets/images/camera.svg';
 import Lock from '../assets/images/lock.svg';
 import Pin from '../assets/images/pin.svg';
+import Lead from '../assets/images/lead1.png';
 
 const Home = () => {
   return (
@@ -72,6 +73,13 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="waitlist">
+        <div className="container">
+          <h2>Join the waitlist</h2>
+        </div>
+        <img src={Lead} alt="USB cable" />
+        <img src={Lead} alt="USB cable" />
       </div>
     </section>
   );
