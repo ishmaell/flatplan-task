@@ -2,6 +2,10 @@
 module.exports = {
   content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
   theme: {
+    fontFamily: {
+      ptSans: ['pt-sans', 'sans-serif'],
+      ptSerif: ['pt-serif', 'serif'],
+    },
     extend: {
       colors: {
         primary: {
@@ -13,4 +17,5 @@ module.exports = {
     },
   },
   plugins: [],
+  important: true,
 }

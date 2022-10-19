@@ -1,14 +1,16 @@
 import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from '../ui/header';
+import Footer from '../ui/footer';
 
 const Root = () => {
   return (
     <Fragment>
-      <header>Header goes here</header>
+      <Header />
       <main>
         <Outlet />
       </main>
-      <footer>Footer goes here</footer>
+      <Footer />
     </Fragment>
   );
 };

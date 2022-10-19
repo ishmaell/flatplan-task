@@ -1,3 +1,4 @@
+import './css/index.css';
 import React, { Suspense, lazy } from 'react';
 import { CircleLoader } from './components/ui/loader';
 
