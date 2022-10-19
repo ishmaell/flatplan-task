@@ -1,0 +1,27 @@
+.useage {
+  @apply py-16;
+}
+
+.useage h2 {
+  @apply text-5xl font-bold text-primary-200 text-center mb-20;
+}
+
+.useage-items {
+  @apply grid grid-cols-3 gap-10;
+}
+
+.useage-item {
+  @apply flex items-center gap-5;
+}
+
+.useage-item img {
+  @apply w-12 h-12;
+}
+
+.useage-item-text p {
+  @apply font-bold font-ptSans mb-1 text-primary-300 text-lg;
+}
+
+.useage-item-text p:nth-child(2) {
+  @apply font-normal text-sm;
+}
